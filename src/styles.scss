@@ -10,3 +10,7 @@
 .button-white {
   @apply px-10 py-3 border bg-white text-black hover:bg-transparent hover:text-white;
 }
+
+.button-red {
+  @apply px-10 py-3 border border-red-800 bg-red-800 text-white hover:bg-transparent hover:text-red-500;
+}
