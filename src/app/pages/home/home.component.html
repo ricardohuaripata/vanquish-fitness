@@ -101,27 +101,29 @@
         <div class="flex justify-center">
             <h1 class="text-2xl md:text-3xl text-gray-700">YOU MAY ALSO LIKE</h1>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
-            @for (item of youMayAlsoLike; track item) {
-            <div class="flex flex-col gap-4 justify-between">
-                <img [src]="item.image" class="aspect-square object-cover" width="100%" height="auto">
+        <div class="carousel-container">
+            <div class="carousel">
+                @for (item of youMayAlsoLike; track item) {
+                <div class="carousel-item">
+                    <img [src]="item.image" class="aspect-square object-cover" [alt]="item.name" width="100%"
+                        height="auto" loading="lazy">
 
-                <div class="flex flex-col items-center gap-2 text-center">
-                    <a href="/" class="text-xs md:text-sm uppercase inline-block">{{item.name}}</a>
-                    <span class="text-xs md:text-sm uppercase text-gray-500">{{item.price}}</span>
+                    <div class="flex flex-col items-center gap-2 text-center">
+                        <a href="/" class="text-xs md:text-sm uppercase inline-block">{{item.name}}</a>
+                        <span class="text-xs md:text-sm uppercase text-gray-500">{{item.price}}</span>
+                    </div>
+
+                    <select name="availableVariants" class="p-2 border border-gray-400 rounded-md">
+                        @for (item of item.availableVariants; track item) {
+                        <option [value]="item.size + '/' + item.color">{{item.size + ' / ' + item.color}}</option>
+                        }
+                    </select>
+
+                    <a href="/"><button class="button-black text-sm md:text-base w-full">ADD TO CART</button></a>
+
                 </div>
-
-                <select name="availableVariants" class="p-2 border border-gray-400 rounded-md">
-                    @for (item of item.availableVariants; track item) {
-                    <option [value]="item.size + '/' + item.color">{{item.size + ' / ' + item.color}}</option>
-                    }
-                </select>
-
-                <a href="/"><button class="button-black text-sm md:text-base w-full">ADD TO CART</button></a>
-
+                }
             </div>
-            }
-
         </div>
 
     </section>

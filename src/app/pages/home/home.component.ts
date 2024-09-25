@@ -218,6 +218,134 @@ export class HomeComponent {
         },
       ],
     },
+    {
+      name: 'Vanquish TSP Black Pegasus Oversized T Shirt',
+      price: '€43,95',
+      image:
+        'https://www.vqfit.com/cdn/shop/files/VQ-Auguste-commerce0102.jpg?v=1725961752&width=400',
+      availableVariants: [
+        {
+          size: 'SMALL',
+          color: 'BLACK',
+        },
+        {
+          size: 'MEDIUM',
+          color: 'BLACK',
+        },
+        {
+          size: 'LARGE',
+          color: 'BLACK',
+        },
+        {
+          size: 'EXTRA LARGE',
+          color: 'BLACK',
+        },
+        {
+          size: 'XXL',
+          color: 'BLACK',
+        },
+        {
+          size: 'XXXL',
+          color: 'BLACK',
+        },
+      ],
+    },
+    {
+      name: 'Vanquish DBZ Shenron Black Oversized T Shirt',
+      price: '€52,95',
+      image:
+        'https://www.vqfit.com/cdn/shop/files/FIRSTSHOT_6_edit.jpg?v=1706783155&width=400',
+      availableVariants: [
+        {
+          size: 'SMALL',
+          color: 'BLACK',
+        },
+        {
+          size: 'MEDIUM',
+          color: 'BLACK',
+        },
+        {
+          size: 'LARGE',
+          color: 'BLACK',
+        },
+        {
+          size: 'EXTRA LARGE',
+          color: 'BLACK',
+        },
+        {
+          size: 'XXL',
+          color: 'BLACK',
+        },
+        {
+          size: 'XXXL',
+          color: 'BLACK',
+        },
+      ],
+    },
+    {
+      name: 'Vanquish TSP Black Champion Oversized Sweatshirt',
+      price: '€55,95',
+      image:
+        'https://www.vqfit.com/cdn/shop/files/Untitled-1_0006_FIRSTSHOT.jpg?v=1715354766&width=400',
+      availableVariants: [
+        {
+          size: 'SMALL',
+          color: 'BLACK',
+        },
+        {
+          size: 'MEDIUM',
+          color: 'BLACK',
+        },
+        {
+          size: 'LARGE',
+          color: 'BLACK',
+        },
+        {
+          size: 'EXTRA LARGE',
+          color: 'BLACK',
+        },
+        {
+          size: 'XXL',
+          color: 'BLACK',
+        },
+        {
+          size: 'XXXL',
+          color: 'BLACK',
+        },
+      ],
+    },
+    {
+      name: 'Vanquish Better Than Yesterday Washed Blue Full Zip Hoodie',
+      price: '€55,95',
+      image:
+        'https://cdn.shopify.com/s/files/1/0585/3653/files/FIRSTSHOT_788b2105-111f-4d9d-a50d-5e71ec0443de.jpg?v=1724925001&width=400',
+      availableVariants: [
+        {
+          size: 'SMALL',
+          color: 'BLACK',
+        },
+        {
+          size: 'MEDIUM',
+          color: 'BLACK',
+        },
+        {
+          size: 'LARGE',
+          color: 'BLACK',
+        },
+        {
+          size: 'EXTRA LARGE',
+          color: 'BLACK',
+        },
+        {
+          size: 'XXL',
+          color: 'BLACK',
+        },
+        {
+          size: 'XXXL',
+          color: 'BLACK',
+        },
+      ],
+    },
   ];
 
   addToWishlist(item: any) {

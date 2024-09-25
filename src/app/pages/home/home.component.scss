@@ -24,3 +24,44 @@
 .filled {
   fill: black !important;
 }
+
+.carousel-container {
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.carousel-item {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  width: calc(25% - 15px); /* 4 items por fila por defecto */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .carousel-item {
+    width: calc(33.33% - 13.33px); /* 3 items por fila */
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+    width: calc(50% - 10px); /* 2 items por fila */
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item {
+    width: 100%; /* 1 item por fila */
+  }
+}
