@@ -1,0 +1,26 @@
+.banner {
+  width: 100%;
+}
+
+.banner-image {
+  aspect-ratio: 35/17;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1023px) {
+  .banner {
+    height: 1000px;
+  }
+}
+
+@media (max-width: 500px) {
+  .banner {
+    height: 700px;
+  }
+}
+
+.filled {
+  fill: black !important;
+}

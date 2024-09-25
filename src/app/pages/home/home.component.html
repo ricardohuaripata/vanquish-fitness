@@ -1,0 +1,129 @@
+<div class="banner bg-black relative">
+    <img src="https://www.vqfit.com/cdn/shop/files/Washed_WebBanner_Desktop.png?v=1725295984&width=2000" alt="banner"
+        class="banner-image opacity-70">
+    <div class="absolute inset-0 flex items-center justify-center">
+        <div class="flex flex-col items-center justify-center gap-7">
+            <h1 class="text-white text-2xl md:text-4xl text-center px-4">BETTER THAN YESTERDAY WASHED</h1>
+            <a href="/"><button class="button-white text-sm md:text-base">SHOP NOW</button></a>
+        </div>
+    </div>
+</div>
+
+<main class="mx-4">
+
+    <section class="my-10 flex flex-col gap-7">
+        <div class="flex justify-center text-center gap-10">
+            <h1 class="text-2xl md:text-3xl text-gray-700 border-black cursor-pointer"
+                (click)="setSelectedCategory('newArrivals')" [class.border-b]="selectedCategory=='newArrivals'">NEW
+                ARRIVALS</h1>
+            <h1 class="text-2xl md:text-3xl text-gray-700 border-black cursor-pointer"
+                (click)="setSelectedCategory('elevate')" [class.border-b]="selectedCategory=='elevate'">ELEVATE</h1>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+
+            @if (selectedCategory === 'newArrivals') {
+            @for (item of newArrivals; track item) {
+            <div class="flex flex-col gap-4">
+                <div class="relative">
+                    <img [src]="item.image" class="aspect-square object-cover" width="100%" height="auto">
+                    <div class="absolute top-4 right-4">
+                        <svg viewBox="0 0 64 64" width="18" height="18" fill="transparent"
+                            [class.filled]="item.isWishlisted" stroke="black" stroke-width="3" class="cursor-pointer"
+                            (click)="addToWishlist(item)">
+                            <path
+                                d="M32.012,59.616c-1.119-.521-2.365-1.141-3.707-1.859a79.264,79.264,0,0,1-11.694-7.614C6.316,42,.266,32.6.254,22.076,0.244,12.358,7.871,4.506,17.232,4.5a16.661,16.661,0,0,1,11.891,4.99l2.837,2.889,2.827-2.9a16.639,16.639,0,0,1,11.874-5.02h0c9.368-.01,17.008,7.815,17.021,17.539,0.015,10.533-6.022,19.96-16.312,28.128a79.314,79.314,0,0,1-11.661,7.63C34.369,58.472,33.127,59.094,32.012,59.616Z">
+                            </path>
+                        </svg>
+                    </div>
+
+                </div>
+                <div class="flex flex-col items-center gap-2 text-center">
+                    <a href="/" class="text-xs md:text-sm uppercase inline-block">{{item.name}}</a>
+                    <span class="text-xs md:text-sm uppercase text-gray-500">{{item.price}}</span>
+                </div>
+
+            </div>
+            }
+            } @else if (selectedCategory === 'elevate') {
+            @for (item of elevate; track item) {
+            <div class="flex flex-col gap-4">
+                <div class="relative">
+                    <img [src]="item.image" class="aspect-square object-cover" width="100%" height="auto">
+                    <div class="absolute top-4 right-4">
+                        <svg viewBox="0 0 64 64" width="18" height="18" fill="transparent"
+                            [class.filled]="item.isWishlisted" stroke="black" stroke-width="3" class="cursor-pointer"
+                            (click)="addToWishlist(item)">
+                            <path
+                                d="M32.012,59.616c-1.119-.521-2.365-1.141-3.707-1.859a79.264,79.264,0,0,1-11.694-7.614C6.316,42,.266,32.6.254,22.076,0.244,12.358,7.871,4.506,17.232,4.5a16.661,16.661,0,0,1,11.891,4.99l2.837,2.889,2.827-2.9a16.639,16.639,0,0,1,11.874-5.02h0c9.368-.01,17.008,7.815,17.021,17.539,0.015,10.533-6.022,19.96-16.312,28.128a79.314,79.314,0,0,1-11.661,7.63C34.369,58.472,33.127,59.094,32.012,59.616Z">
+                            </path>
+                        </svg>
+                    </div>
+
+                </div>
+                <div class="flex flex-col items-center gap-2 text-center">
+                    <a href="/" class="text-xs md:text-sm uppercase inline-block">{{item.name}}</a>
+                    <span class="text-xs md:text-sm uppercase text-gray-500">{{item.price}}</span>
+                </div>
+
+            </div>
+            }
+            }
+
+        </div>
+        <div class="flex justify-center">
+            <a href="/"><button class="button-black text-sm md:text-base">SHOP NOW</button></a>
+
+        </div>
+
+    </section>
+
+    <section class="my-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+            @for (item of collection1; track item) {
+            <div class="relative overflow-hidden">
+                <div class="bg-black">
+                    <img [src]="item.image"
+                        class="aspect-square object-cover opacity-70 transition-transform duration-300 ease-in-out hover:scale-110"
+                        width="100%" height="auto">
+                </div>
+                <div class="absolute bottom-4 w-full flex justify-center">
+                    <a href="/"><button class="button-white text-sm md:text-base">{{item.name}}</button></a>
+                </div>
+
+            </div>
+            }
+
+        </div>
+
+    </section>
+
+    <section class="my-10 flex flex-col gap-7">
+        <div class="flex justify-center">
+            <h1 class="text-2xl md:text-3xl text-gray-700">YOU MAY ALSO LIKE</h1>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
+            @for (item of youMayAlsoLike; track item) {
+            <div class="flex flex-col gap-4 justify-between">
+                <img [src]="item.image" class="aspect-square object-cover" width="100%" height="auto">
+
+                <div class="flex flex-col items-center gap-2 text-center">
+                    <a href="/" class="text-xs md:text-sm uppercase inline-block">{{item.name}}</a>
+                    <span class="text-xs md:text-sm uppercase text-gray-500">{{item.price}}</span>
+                </div>
+
+                <select name="availableVariants" class="p-2 border border-gray-400 rounded-md">
+                    @for (item of item.availableVariants; track item) {
+                    <option [value]="item.size + '/' + item.color">{{item.size + ' / ' + item.color}}</option>
+                    }
+                </select>
+
+                <a href="/"><button class="button-black text-sm md:text-base w-full">ADD TO CART</button></a>
+
+            </div>
+            }
+
+        </div>
+
+    </section>
+
+</main>

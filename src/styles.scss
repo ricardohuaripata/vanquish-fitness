@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.button-black {
+  @apply px-10 py-3 border border-black bg-zinc-900 text-white hover:bg-transparent hover:text-black;
+}
+
+.button-white {
+  @apply px-10 py-3 border bg-white text-black hover:bg-transparent hover:text-white;
+}
