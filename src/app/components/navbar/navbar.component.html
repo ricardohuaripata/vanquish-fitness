@@ -1,6 +1,14 @@
 <nav class="w-full bg-white px-5 py-5 md:px-10">
-    <div class="relative flex flex-wrap gap-5 lg:gap-10 justify-between lg:justify-center items-center">
-        <ul class="lg:absolute left-0 flex flex-wrap gap-5 lg:gap-10 text-sm">
+    <div class="relative flex flex-wrap gap-5 lg:gap-10 justify-center items-center">
+        <button class="lg:hidden absolute left-0" data-drawer-target="drawer-navigation"
+            data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 sm:w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+
+        <ul class="hidden lg:flex absolute left-0 gap-5 lg:gap-10 text-sm">
             <li> <a href="/" class="">
                     <span>NEW</span>
                 </a></li>
@@ -22,38 +30,71 @@
                 <span>VANQUISH FITNESS</span>
             </a>
         </div>
-        <div class="lg:absolute right-0">
-            <ul class="flex gap-5">
-                <li> <a href="/" class="">
-                        <svg aria-hidden="true" fill="none" focusable="false" width="24"
-                            class="header__nav-icon icon icon-account" viewBox="0 0 24 24">
-                            <path
-                                d="M16.125 8.75c-.184 2.478-2.063 4.5-4.125 4.5s-3.944-2.021-4.125-4.5c-.187-2.578 1.64-4.5 4.125-4.5 2.484 0 4.313 1.969 4.125 4.5Z"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            </path>
-                            <path d="M3.017 20.747C3.783 16.5 7.922 14.25 12 14.25s8.217 2.25 8.984 6.497"
-                                stroke="currentColor" stroke-width="2" stroke-miterlimit="10"></path>
-                        </svg> </a></li>
+        <ul class="absolute right-0 flex items-center gap-3 lg:gap-5">
+            <li class="max-lg:hidden"> <a href="/" class="">
+                    <svg aria-hidden="true" fill="none" focusable="false" class="w-5 sm:w-6" viewBox="0 0 24 24">
+                        <path
+                            d="M16.125 8.75c-.184 2.478-2.063 4.5-4.125 4.5s-3.944-2.021-4.125-4.5c-.187-2.578 1.64-4.5 4.125-4.5 2.484 0 4.313 1.969 4.125 4.5Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path d="M3.017 20.747C3.783 16.5 7.922 14.25 12 14.25s8.217 2.25 8.984 6.497"
+                            stroke="currentColor" stroke-width="2" stroke-miterlimit="10"></path>
+                    </svg> </a></li>
 
-                <li> <a href="/" class="">
-                        <svg aria-hidden="true" fill="none" focusable="false" width="24"
-                            class="header__nav-icon icon icon-search" viewBox="0 0 24 24">
-                            <path d="M10.364 3a7.364 7.364 0 1 0 0 14.727 7.364 7.364 0 0 0 0-14.727Z"
-                                stroke="currentColor" stroke-width="2" stroke-miterlimit="10"></path>
-                            <path d="M15.857 15.858 21 21.001" stroke="currentColor" stroke-width="2"
-                                stroke-miterlimit="10" stroke-linecap="round"></path>
-                        </svg> </a></li>
+            <li> <a href="/" class="">
+                    <svg aria-hidden="true" fill="none" focusable="false" class="w-5 sm:w-6" viewBox="0 0 24 24">
+                        <path d="M10.364 3a7.364 7.364 0 1 0 0 14.727 7.364 7.364 0 0 0 0-14.727Z" stroke="currentColor"
+                            stroke-width="2" stroke-miterlimit="10"></path>
+                        <path d="M15.857 15.858 21 21.001" stroke="currentColor" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linecap="round"></path>
+                    </svg> </a></li>
 
-                <li> <a href="/" class="">
-                        <svg aria-hidden="true" fill="none" focusable="false" width="24"
-                            class="header__nav-icon icon icon-cart" viewBox="0 0 24 24">
-                            <path
-                                d="M4.75 8.25A.75.75 0 0 0 4 9L3 19.125c0 1.418 1.207 2.625 2.625 2.625h12.75c1.418 0 2.625-1.149 2.625-2.566L20 9a.75.75 0 0 0-.75-.75H4.75Zm2.75 0v-1.5a4.5 4.5 0 0 1 4.5-4.5v0a4.5 4.5 0 0 1 4.5 4.5v1.5"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            </path>
-                        </svg> </a></li>
+            <li> <a href="/" class="">
+                    <svg aria-hidden="true" fill="none" focusable="false" class="w-5 sm:w-6" viewBox="0 0 24 24">
+                        <path
+                            d="M4.75 8.25A.75.75 0 0 0 4 9L3 19.125c0 1.418 1.207 2.625 2.625 2.625h12.75c1.418 0 2.625-1.149 2.625-2.566L20 9a.75.75 0 0 0-.75-.75H4.75Zm2.75 0v-1.5a4.5 4.5 0 0 1 4.5-4.5v0a4.5 4.5 0 0 1 4.5 4.5v1.5"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                    </svg> </a></li>
 
-            </ul>
-        </div>
+        </ul>
     </div>
 </nav>
+
+<div id="drawer-navigation"
+    class="fixed top-0 left-0 z-40 w-full max-w-64 sm:max-w-96 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white"
+    tabindex="-1" aria-labelledby="drawer-navigation-label">
+    <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class="p-2">
+        <svg aria-hidden="true" class="w-5 sm:w-6" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+        </svg>
+        <span class="sr-only">Close menu</span>
+    </button>
+    <div class="py-4 overflow-y-auto">
+        <ul class="space-y-2 font-medium">
+            <li>
+                <a href="/" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
+                    <span>NEW</span>
+                </a>
+            </li>
+            <li>
+                <a href="/" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
+                    <span>MENS</span>
+                </a>
+            </li>
+            <li>
+                <a href="/" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
+                    <span>WOMENS</span>
+                </a>
+            </li>
+            <li>
+                <a href="/" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
+                    <span>OUTLET SALE</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
