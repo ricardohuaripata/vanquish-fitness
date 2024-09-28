@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: #efefef;
+}
+
 .button-black {
   @apply px-10 py-3 border border-black bg-zinc-900 text-white hover:bg-transparent hover:text-black;
 }
